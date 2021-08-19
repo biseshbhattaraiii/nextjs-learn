@@ -24,8 +24,8 @@
         -> The 'ab*cd' route path will match abcd , ab_cd , abecd and so on . 
     
     -Asynchronicity
-        -> Event async function has to return a Promise . This means that you can return a deferred value that Nest will be able to resolve by itself . 
-        ->The above code is fully valid. Furthermore, Nest route handlers are even more powerful by being able to return RxJS observable streams (TODO)
+        - Event async function has to return a Promise . This means that you can return a deferred value that Nest will be able to resolve by itself. 
+        - The above code is fully valid. Furthermore, Nest route handlers are even more powerful by being able to return RxJS observable streams (TODO)
 
 #### Providers 
 1. main idea of provider is that is can be injected as dependency which means objects can create various relationships with each other. 
@@ -59,10 +59,10 @@
 6. Module re-exporting 
     Modules can export their internal providers . In addition , they can re-export modules that they import .  
 7. Dependency Injection 
-        A module class can inject providers as well , however modules classes themselves cannot be injected as providers due to circular dependencies . 
+        - A module class can inject providers as well , however modules classes themselves cannot be injected as providers due to circular dependencies . 
 
         - Circular dependencies 
-        -> A circular dependency occurs when two classes depend on each other. For example class A needs class B , and class B also needs class A . Circular dependencies can arise in Nest between modules and between providers . 
+         A circular dependency occurs when two classes depend on each other. For example class A needs class B , and class B also needs class A . Circular dependencies can arise in Nest between modules and between providers . 
 8. Global modules 
     As Nest encapsulates providers inside the module scope . You aren't able to use a module's providers elsewhere without first importing the encapsulating module . To make module global make the use of ```@Global()``` decorator . 
 9. Dynamic modules 
