@@ -1,13 +1,13 @@
 # Nest.js Reference 
 
 Node js 
-    1. javascript runtime built on chrome V8 javascript engine 
-    2. is single threaded but can handle more concurrent client requests as it follows single threaded with event loop model . 
-    3. event loop is the secret behind javascript asynchronous programming . 
-    4. when an async function is called , it is sent to a browser API 
-    These are APIs built into the browser . Based on the command received from the call stack , the API starts its own single-threaded operation . 
-    5. When a setTimeout operation is processed , the operation is sent into the event queue . Hence we have cyclic system for running async operations in JavaScript . The language itself is single threaded , but the browser APIs acts as separate threads . 
-    6. The event loop facilates this process ; it constantly checks whether or not the call stack is empty . If it is empty , new functions are added from the event queue . If it is not , then the current function call is processed . 
+1. javascript runtime built on chrome V8 javascript engine 
+2. is single threaded but can handle more concurrent client requests as it follows single threaded with event loop model . 
+3. event loop is the secret behind javascript asynchronous programming . 
+4. when an async function is called , it is sent to a browser API 
+These are APIs built into the browser . Based on the command received from the call stack , the API starts its own single-threaded operation . 
+5. When a setTimeout operation is processed , the operation is sent into the event queue . Hence we have cyclic system for running async operations in JavaScript . The language itself is single threaded , but the browser APIs acts as separate threads . 
+6. The event loop facilates this process ; it constantly checks whether or not the call stack is empty . If it is empty , new functions are added from the event queue . If it is not , then the current function call is processed . 
     
     Single Thread 
         -> A single thread language is one with a single call stack and a single memory heap . It means that it runs only one thing at a time . 
