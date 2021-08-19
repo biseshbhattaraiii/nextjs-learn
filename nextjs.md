@@ -1,11 +1,11 @@
 # Next.js 
 
-##Basic overview 
+## Basic overview 
     1. Compatible with both typescript and pure javascript . 
     2 . (main.ts) To create a Nest application instance , we use the core NestFactory class . The ```create()``` method returns an application object , which fulfills the ```INestApplication``` interface . 
-    3 . HTTP platforms supported out-of-the-box are express and fastify .
+    3 . HTTP platforms supported out-of-the-box are express and fastify 
 
-    ####Controllers 
+    #### Controllers 
         1. used for handling incoming requests and returning responses to the client 
         ![](https://docs.nestjs.com/assets/Controllers_1.png)
         2. each controller has more than one route , and different routes can perform different actions .  
@@ -26,7 +26,7 @@
                 -> Event async function has to return a Promise . This means that you can return a deferred value that Nest will be able to resolve by itself . 
                 ->The above code is fully valid. Furthermore, Nest route handlers are even more powerful by being able to return RxJS observable streams (TODO)
 
-        ####Providers 
+        #### Providers 
             1. main idea of provider is that is can be injected as dependency which means objects can create various relationships with each other. 
             2. Controllers should handle HTTP requests and delegate more complex tasks to providers . 
             3. The ```@Injectable()``` decorator attachers metadata , which declares that <Service_Name> is a class that can be managed by the Nest IoC container. 
@@ -42,7 +42,7 @@
             6. Provider registration 
                 -> Now once we have defined a provider , and we have a consumer of that service , we need to register the service with Nest so that it can perform the injection . 
         
-        ####Modules 
+        #### Modules 
             1. is a class annotated with a ```@Module()``` decorator , provides metadata that Nest makes use of to organize the application structure . 
             2. Each application has atleast one root module . 
             3. The ```@Module()``` decorator takes a single object whose properties describe the module . 
